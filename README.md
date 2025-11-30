@@ -7,3 +7,16 @@ The program streams the CSV file record-by-record using CsvHelper.GetRecordsAsyn
 If I needed to scale this solution to reliably handle a 10GB CSV file or larger, the first change I would make is to replace Entity Framework batch inserts with SqlBulkCopy, which provides a highly optimized, low-overhead bulk insertion mechanism. This would significantly increase throughput and reduce insertion time for extremely large datasets.
 
 Additional improvements could include parallelizing CPU-bound data transformations or using a producer–consumer pipeline, but those would be secondary optimizations. The core design—streaming input, validating incrementally, and writing duplicates immediately—already supports very large file processing efficiently.
+
+## Secrets / Configuration
+
+To run this project, you need to provide your own `appsettings.secret.json` file with the database connection and file paths.
+
+Example `appsettings.secret.json` structure:
+
+```json
+{
+  "ConnectionStrings": {
+    "CabDB": "Server=<your-server>;Database=<your-db>;User Id=<your-user>;Password=<your-password>;TrustServerCertificate=True;"
+  }
+}
