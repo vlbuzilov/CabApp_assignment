@@ -55,8 +55,7 @@ nunit-*.xml
 
 .vscode/
 
-SampleData/
-ResultData/
+sample-cab-data.csv
 
 appsettings.secret.json
 
