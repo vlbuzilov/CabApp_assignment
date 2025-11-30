@@ -1,4 +1,5 @@
 **Handling Large Files (e.g., 10GB CSV)**
+
 The current implementation is already designed to work efficiently with large datasets.
 
 The program streams the CSV file record-by-record using CsvHelper.GetRecordsAsync, which ensures that only a small portion of the file is kept in memory at any time. Duplicate detection is also handled in a streaming manner, and batches of 1000 records are inserted into the database, preventing excessive memory usage.
