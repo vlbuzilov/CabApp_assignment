@@ -55,8 +55,6 @@ nunit-*.xml
 
 .vscode/
 
-sample-cab-data.csv
-
 appsettings.secret.json
 
 .DS_Store
