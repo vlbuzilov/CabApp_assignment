@@ -6,7 +6,7 @@ CREATE TABLE CabData (
     tpep_pickup_datetime DATETIME2(2) NOT NULL,
     tpep_dropoff_datetime DATETIME2(2) NOT NULL,
     passenger_count TINYINT NULL,
-    trip_distance FLOAT NULL,   
+    trip_distance DECIMAL(10,2) NULL,   
     store_and_fwd_flag VARCHAR(3) NULL,
     PULocationID INT NULL,
     DOLocationID INT NULL,
